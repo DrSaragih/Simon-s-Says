@@ -17,7 +17,7 @@ Vite listens on port 5173. Build with `npm run build`, or serve the production b
 
 Start the machine, watch the toy sequence, and repeat it by clicking toys or pressing 1–4. Each completed round adds a toy. Classic offers a slower pace; Turbo speeds up playback. Space starts a new run. The best completed round is stored locally in the browser. Audio is generated with the Web Audio API and can be muted.
 
-The four toy illustrations are original inline SVG assets in `src/main.jsx`. The original generated workshop illustration is at `public/assets/toy-factory.png` and appears in the game guide. No account, API key, backend, or external game asset service is required. Google Fonts are optional; system fonts provide a fallback.
+The four toy illustrations are original inline SVG assets in `src/main.jsx`. The original workshop illustration is at `public/assets/toy-factory.png`; the Christmas and New Year edition uses `public/assets/holiday-factory.png` in the banner and game guide. No account, API key, backend, or external game asset service is required. Google Fonts are optional; system fonts provide a fallback.
 
 ## Validation
 
@@ -30,3 +30,11 @@ An original synthesized music-box waltz starts on the first play gesture. The Mu
 Every 3 rounds begins a new shift with faster playback. Classic introduces a per-response time limit at round 4; Turbo is timed from round 1. From round 7, every third round (7, 10, 13, …) requires the pattern in reverse order, indicated by the order badge and instructions. Each correct input refreshes the response timer; timeout ends the run. The soundtrack is in `src/music.js`.
 
 Additional browser validation covers seven consecutive rounds, reverse input, timed failure, music toggling, and mobile overflow.
+
+## Christmas & New Year edition
+
+The holiday workshop includes an original snowy factory illustration, evergreen and cranberry machine colors, festive string lights, Santa-hat robot, scarf-wearing duck, gift ribbon, and peppermint rocket details.
+
+Background music and toy effects now have higher output gain. The master Volume slider controls both from 0–100% (default 85%) and persists across reloads. Music also has its own on/off button; the speaker button controls toy effects. A dynamics compressor on the music bus manages overlapping notes. The holiday arrangement adds high bell accents; playback still softens while the pattern is demonstrated.
+
+Browser checks verify increased music/effect gain, volume at zero and maximum, saved volume, holiday image loading, responsive layout, and the seven-round challenge flow. Physical laptop speaker loudness varies; it was not measured on the user's device.
