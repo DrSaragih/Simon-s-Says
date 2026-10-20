@@ -22,3 +22,11 @@ The four toy illustrations are original inline SVG assets in `src/main.jsx`. The
 ## Validation
 
 Production build and a browser smoke check cover correct sequences across two rounds, incorrect input, reset, pace selection, the guide, score persistence, and mobile overflow.
+
+## Factory shifts and soundtrack
+
+An original synthesized music-box waltz starts on the first play gesture. The Music button controls the background soundtrack separately from toy sound effects. Music softens during pattern playback and pauses while the browser tab is hidden. No music files or external audio services are required.
+
+Every 3 rounds begins a new shift with faster playback. Classic introduces a per-response time limit at round 4; Turbo is timed from round 1. From round 7, every third round (7, 10, 13, …) requires the pattern in reverse order, indicated by the order badge and instructions. Each correct input refreshes the response timer; timeout ends the run. The soundtrack is in `src/music.js`.
+
+Additional browser validation covers seven consecutive rounds, reverse input, timed failure, music toggling, and mobile overflow.
