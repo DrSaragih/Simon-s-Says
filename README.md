@@ -46,3 +46,11 @@ A failed round now opens a workshop quality-check popup. It shows the reached ro
 During sequence playback, inactive pads dim while the active toy receives a bright cream spotlight, golden outline and glow, enlarged toy, and a star marker. These are steady highlights rather than strobe effects. The original Pip & Bolt workshop-inspector illustration is stored in `public/assets/workshop-inspector.png` and appears on the board and in the round review. Toy SVG filters use unique IDs so repeated illustrations in the review remain independent.
 
 Browser validation covers reverse-round failure, expected versus entered history, failed-step markers, timeout review, retry cleanup, modal keyboard handling, mobile width, new asset loading, and brighter pad styles.
+
+## Paused phase instructions
+
+Before new shifts (rounds 4, 7, 10, …), a modal explains the upcoming rules. Reverse rounds explicitly explain last-to-first input with a separate illustrative example. The next forward round (8, 11, …) announces the return to normal order. Turbo also explains its timer before round 1.
+
+Instruction modals impose a 3-second minimum reading pause and then wait indefinitely for “Saya mengerti, mulai”. Neither pattern playback nor the response timer starts while instructions are open. Clicking outside or pressing Escape does not silently start the game; “Akhiri sesi” resets it. Keyboard focus stays within the modal. Examples are clearly labeled as examples, not the current round's sequence.
+
+Browser validation completes 10 rounds, checks the briefings at rounds 4/7/8/10 and Turbo startup, verifies 30 seconds without gameplay during each briefing, and checks mobile width and exit/reset behavior.
