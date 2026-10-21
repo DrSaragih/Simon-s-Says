@@ -38,3 +38,11 @@ The holiday workshop includes an original snowy factory illustration, evergreen 
 Background music and toy effects now have higher output gain. The master Volume slider controls both from 0–100% (default 85%) and persists across reloads. Music also has its own on/off button; the speaker button controls toy effects. A dynamics compressor on the music bus manages overlapping notes. The holiday arrangement adds high bell accents; playback still softens while the pattern is demonstrated.
 
 Browser checks verify increased music/effect gain, volume at zero and maximum, saved volume, holiday image loading, responsive layout, and the seven-round challenge flow. Physical laptop speaker loudness varies; it was not measured on the user's device.
+
+## Round review and brighter signals
+
+A failed round now opens a workshop quality-check popup. It shows the reached round, completed rounds, full expected input order, actual button presses, correct steps, and the failed step. Reverse rounds are displayed in their required reversed order. Timeouts identify the next missing toy. Dismiss with Escape or the close button, reopen with “View sequence & round review”, or start a fresh game with Try again. Keyboard input stays within the modal and Tab cycles through its controls.
+
+During sequence playback, inactive pads dim while the active toy receives a bright cream spotlight, golden outline and glow, enlarged toy, and a star marker. These are steady highlights rather than strobe effects. The original Pip & Bolt workshop-inspector illustration is stored in `public/assets/workshop-inspector.png` and appears on the board and in the round review. Toy SVG filters use unique IDs so repeated illustrations in the review remain independent.
+
+Browser validation covers reverse-round failure, expected versus entered history, failed-step markers, timeout review, retry cleanup, modal keyboard handling, mobile width, new asset loading, and brighter pad styles.
